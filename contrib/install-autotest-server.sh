@@ -254,6 +254,8 @@ install_packages() {
         print_log "ERROR" "Failed to install autotest packages dependencies"
         exit 1
     fi
+    print_log "INFO" "Installing pep8"
+    pip install pep8
 }
 
 setup_selinux() {
