@@ -343,6 +343,8 @@ else
        git pull
     fi
 fi
+wget -c https://raw.githubusercontent.com/joyxu/autotest-patches/master/0001-remove-python-autopep8-dependence-and-wsgi.patch
+git apply 0001-remove-python-autopep8-dependence-and-wsgi.patch
 
 print_log "INFO" "Initializing and updating tests to the latest $AUTOTEST_TESTS_BRANCH"
 cd $ATHOME
@@ -350,6 +352,10 @@ git submodule init
 git submodule update --recursive
 cd $ATHOME/client/tests
 git checkout $AUTOTEST_TESTS_BRANCH
+
+wget -c https://raw.githubusercontent.com/joyxu/autotest-patches/master/0002-add-phoronixbench-and-fixed-hackbench-aiostress-comp.patch
+git apply 0002-add-phoronixbench-and-fixed-hackbench-aiostress-comp.patch
+
 cd $ATHOME/client/tests/virt
 git checkout $AUTOTEST_TESTS_BRANCH
 cd $ATHOME/server/tests
