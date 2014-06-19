@@ -45,7 +45,7 @@ RewriteEngine On
        Options +ExecCGI
     </LocationMatch>
 
-    WSGISocketPrefix run/wsgi
+    #WSGISocketPrefix run/wsgi
     WSGIDaemonProcess autotestapache processes=10 threads=1
     WSGIProcessGroup autotestapache
     WSGIPassAuthorization On

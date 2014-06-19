@@ -75,7 +75,6 @@ UBUNTU_PKGS = [
     'makepasswd',
     'mysql-server',
     'openjdk-7-jre-headless',
-    'python-autopep8',
     'python-crypto',
     'python-django',
     'python-django-south',
